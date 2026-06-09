@@ -1,0 +1,129 @@
+/* --- PALETA DE COLORES ELEGANTE --- */
+:root {
+    --bg-cream: #f9f8f4; /* Fondo cremita sutil */
+    --card-white: #ffffff;
+    --text-dark: #1a202c;
+    --text-muted: #718096;
+    --brand-blue: #0f2e53; /* Azul marino */
+    --brand-orange: #e65c00; /* Naranja quemado */
+    --divider: #edf2f7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* UTILIDADES */
+.mt-1 { margin-top: 10px; } .mt-2 { margin-top: 20px; } .mt-3 { margin-top: 30px; } .mt-4 { margin-top: 40px; }
+.mb-2 { margin-bottom: 20px; } .mb-3 { margin-bottom: 30px; }
+.pt-2 { padding-top: 20px; }
+.text-center { text-align: center; }
+.w-100 { width: 100%; display: flex; }
+.text-blue { color: var(--brand-blue); }
+
+/* CONTENEDORES */
+.app-container { max-width: 600px; margin: 0 auto; }
+.content-wrapper { padding: 0 20px; }
+.tab-section { display: none; opacity: 0; transition: opacity 0.3s ease; }
+.tab-section.active { display: block; opacity: 1; }
+
+/* HEADER OCULTO POR DEFECTO */
+.header-hidden { display: none; }
+.header-img, .footer-img { width: 100%; display: block; object-fit: cover; }
+
+/* MENÚ NATIVO (1.png y 2.png pegados) */
+.menu-nativo { width: 100%; display: flex; flex-direction: column; }
+.menu-page { width: 100%; display: block; height: auto; }
+
+/* BOTÓN DE DESCARGA SUTIL */
+.download-container { display: flex; justify-content: center; margin-top: 20px; padding: 0 20px; }
+.btn-download {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 24px; border-radius: 30px; font-size: 13px; font-weight: 600;
+    color: var(--brand-orange); border: 1px solid var(--brand-orange);
+    text-decoration: none; background: transparent; transition: all 0.2s;
+}
+.btn-download svg { width: 16px; height: 16px; }
+.btn-download:active { background: var(--brand-orange); color: white; }
+
+/* TIPOGRAFÍA SECCIONES */
+.page-title { font-size: 28px; font-weight: 800; color: var(--brand-blue); letter-spacing: -0.5px; line-height: 1.2; text-align: center; }
+.page-subtitle { font-size: 14px; color: var(--text-muted); line-height: 1.5; text-align: center; }
+
+/* TARJETAS DE INFORMACIÓN (Más elegantes) */
+.info-card {
+    background-color: var(--card-white);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03); /* Sombra muy suave y moderna */
+    border: 1px solid rgba(0,0,0,0.02);
+}
+.divider { height: 1px; background-color: var(--divider); margin: 15px 0; }
+
+/* ANIMACIONES SCROLL (NUEVO) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FILAS DE DATOS BANCARIOS */
+.card-row { display: flex; justify-content: space-between; align-items: center; }
+.card-col { display: flex; flex-direction: column; }
+.label { font-size: 11px; font-weight: 800; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 4px; text-transform: uppercase; }
+.value-bold { font-size: 20px; font-weight: 800; }
+.value-mono { font-size: 17px; font-family: monospace; font-weight: 700; letter-spacing: 1px; color: var(--text-dark); }
+.bank-icon { font-size: 24px; }
+
+/* BOTONES GLOBALES (Contacto) */
+.btn-primary, .btn-whatsapp, .btn-instagram {
+    display: flex; justify-content: center; align-items: center;
+    padding: 16px; border-radius: 12px; font-size: 15px; font-weight: 700;
+    text-decoration: none; border: none; cursor: pointer; transition: transform 0.1s, opacity 0.2s;
+}
+.btn-primary:active, .btn-whatsapp:active, .btn-instagram:active { transform: scale(0.98); opacity: 0.8; }
+
+.btn-primary { background-color: var(--brand-orange); color: #fff; box-shadow: 0 4px 10px rgba(230, 92, 0, 0.2); }
+.btn-whatsapp { background-color: #25D366; color: #fff; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2); }
+.btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
+
+.btn-copy { background-color: rgba(15, 46, 83, 0.08); color: var(--brand-blue); border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+.btn-copy:active { background-color: var(--brand-blue); color: #fff; }
+
+/* FORMULARIO RESEÑAS */
+.form-textarea { width: 100%; background-color: var(--bg-cream); color: var(--text-dark); border: 1px solid var(--divider); padding: 15px; border-radius: 10px; font-size: 15px; resize: none; outline: none; transition: border-color 0.2s; font-family: 'Montserrat', sans-serif;}
+.form-textarea:focus { border-color: var(--brand-orange); }
+.upload-row { display: flex; align-items: center; gap: 12px; }
+.btn-upload { background-color: var(--bg-cream); color: var(--brand-blue); padding: 10px 15px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px dashed var(--brand-blue); }
+.status-text { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+
+/* FEED DE COMENTARIOS */
+.review-card { background-color: var(--card-white); padding: 20px; border-radius: 14px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-left: 4px solid var(--brand-orange); }
+.review-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.review-author { font-size: 14px; font-weight: 700; color: var(--brand-blue); }
+.review-date { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+.review-text { font-size: 15px; line-height: 1.5; color: var(--text-dark); }
+.review-img { width: 100%; border-radius: 8px; margin-top: 15px; border: 1px solid var(--divider); }
+
+/* NAVEGACIÓN INFERIOR ESTILO APP NATIVA */
+.bottom-nav {
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--divider);
+    display: flex; justify-content: space-around; padding: 12px 0 25px 0; z-index: 100;
+}
+.nav-item { background: none; border: none; color: var(--text-muted); display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; transition: color 0.2s; }
+.nav-icon { width: 24px; height: 24px; }
+.nav-text { font-size: 10px; font-weight: 700; }
+.nav-item.active { color: var(--brand-orange); }
