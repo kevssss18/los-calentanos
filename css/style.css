@@ -86,16 +86,17 @@ body {
 .bank-icon { font-size: 24px; }
 
 /* BOTONES GLOBALES (Contacto) */
-.btn-primary, .btn-whatsapp, .btn-instagram {
+.btn-primary, .btn-whatsapp, .btn-instagram, .btn-tiktok {
     display: flex; justify-content: center; align-items: center;
     padding: 16px; border-radius: 12px; font-size: 15px; font-weight: 700;
     text-decoration: none; border: none; cursor: pointer; transition: transform 0.1s, opacity 0.2s;
 }
-.btn-primary:active, .btn-whatsapp:active, .btn-instagram:active { transform: scale(0.98); opacity: 0.8; }
+.btn-primary:active, .btn-whatsapp:active, .btn-instagram:active, .btn-tiktok:active { transform: scale(0.98); opacity: 0.8; }
 
 .btn-primary { background-color: var(--brand-orange); color: #fff; box-shadow: 0 4px 10px rgba(230, 92, 0, 0.2); }
 .btn-whatsapp { background-color: #25D366; color: #fff; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2); }
 .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
+.btn-tiktok { background: linear-gradient(45deg, #2d2925 0%, #4a4645 25%, #524d69 50%, #8d8186 75%, #5e5e75 100%); color: #fff; }
 
 .btn-copy { background-color: rgba(15, 46, 83, 0.08); color: var(--brand-blue); border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
 .btn-copy:active { background-color: var(--brand-blue); color: #fff; }
